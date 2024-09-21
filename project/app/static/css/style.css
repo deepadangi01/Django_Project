@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+
+}
+.home{
+    background:url("/static/img/banner-bg.jpg") 50% 0 no-repeat fixed;
+    height: 80vh;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    background-color: rgba(0,0,0, .4);
+    top: 0;
+    padding:10px;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.content ul li{
+    list-style: none;
+    padding:10px;
+    font-size: 20px;
+    font-weight: 300;
+    
+}
+.content ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+
+}
+.content ul li a:hover{
+    color:rgb(251, 123, 11);
+    border-bottom: 1px solid orange;
+    padding:6px;
+}
+
+.home-content{
+    text-align: left;
+    padding:5rem 5rem;
+
+}
+.home-content h1{
+    font-size: 50px;
+    color:white;
+    padding:20px 0px;
+}
+.box-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:2rem 0px;
+    grid-gap: 20px;
+
+    
+}
+.box{
+    background-color: rgba(0,0,0, .1);
+    text-align: center;
+    padding:30px;
+}
+.box p{
+    padding:10px;
+    font-weight: 500;
+
+}
+.btn{
+    background-color: orange;
+    padding:4px 10px;
+    margin:.5rem 0px;
+    border: 1px solid orangered;
+    border-radius: 5px;
+
+}
+.btn a{
+    text-decoration: none;
+    color:white;
+}
+.btn:hover{
+background-color:black;
+}
+
+.box:hover{
+    background-color:rgb(251, 123, 11);
+    color:white;
+}
+.register{
+   background:url("/static/img/register.jpg") 50% 0 no-repeat fixed;
+   display: flex;
+   height: 100vh;
+}
+.from{
+    background-color: rgb(63, 65, 65,.3);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding:40px;
+}
+.from h3{
+    padding:20px 0px;
+    color:rgb(255, 140, 0);
+}
+.from input{
+    padding:10px ;
+    margin: 10px 0px;
+}
+.reg-btn{
+    background-color: rgb(213, 99, 13);
+    padding:10px;
+    border: none;
+    color:white;
+}
+.regi-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding:3rem;
+    color:white;
+}
+.regi-content h2{
+    padding:30px 0px;
+    font-size: 30px;
+}
