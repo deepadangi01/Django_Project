@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Education </title>
 </head>
@@ -17,7 +18,23 @@
                 inappropriate behavior is often laughed off as “boys will be boys,” 
                 women face higher conduct standards especially in the workplace. That's why it's crucial that, as women, our behavior on the job is beyond reproach.
             </p>
+            <div class="box-reg">
+                <div class="box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h1>Expert Instructors</h1>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h1>Certification</h1>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+
+                    </p>
+                </div>
+            </div>
         </div>
+        
     <form class="from" action="" method="post">
         {% csrf_token %}
         <h3>Search for Available Course</h3>
@@ -25,6 +42,14 @@
         <input type="tel" name="" id="" placeholder="Mobile number">
         <input type="date" name="" id="" placeholder="BOD">
         <input type="email" name="" id="" placeholder="Email">
+        <select>
+            <option value="Learn React js beginners">Learn React js beginners</option>
+            <option value="Python Full Stack">Python Full Stack</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Java Full Stack">Java Full Stack</option>
+            <option value="Learn Designing">Learn Designing</option>
+        </select>
         <button class="reg-btn">Submit</button>
     </form>
     </div>

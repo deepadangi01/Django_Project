@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Education website</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
     <div class="home">
         <div class="navbar">
@@ -17,7 +21,7 @@
             <div class="content">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Courses</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -39,31 +43,89 @@
 
         </div>
         <div class="box-content">
-         <div class="box1 box">
-            <h3>Learn Online Courses</h3>
-           <p>
-            Usage of the Internet is becoming more common due to rapid advancement of technology.
-           </p>
-           <a href="#">Join Now</a>
+            <div class="box1 box">
+                <h3>Learn Online Courses</h3>
+                <p>
+                    Usage of the Internet is becoming more common due to rapid advancement of technology.
+                </p>
+                <a href="#">Join Now</a>
+            </div>
+            <div class="box2 box">
+                <h3>No.1 of universities</h3>
+                <p>
+                    For many of us, our very first experience of
+                    learning about the celestial bodies begins when we saw our first.
+                </p>
+                <a href="#">Join Now</a>
+            </div>
+            <div class="box3 box">
+                <h3>Huge Library</h3>
+                <p>If you are a serious astronomy fanatic like
+                    a lot of us are, you can probably remember that one event.
+                </p>
+                <a href="#">Join Now</a>
+            </div>
+
         </div>
-         <div class="box2 box">
-            <h3>No.1 of universities</h3>
-           <p>
-            For many of us, our very first experience of 
-            learning about the celestial bodies begins when we saw our first.
-            </p>
-            <a href="#">Join Now</a>
-         </div>
-         <div class="box3 box">
-            <h3>Huge Library</h3>
-            <p>If you are a serious astronomy fanatic like 
-                a lot of us are, you can probably remember that one event.
-            </p>
-            <a href="#">Join Now</a>
-         </div>
-         
-    </div>
-    
-    
+        <div class="about" id="about">
+            <div class="container1">
+                <div class="about-img">
+                    <img src="{% static 'img/about.jpg'%}" alt="">
+                </div>
+                <div class="about-content">
+                    <h1>Who we are to Serave the nation</h1>
+                    <p>inappropriate behavior is often laughed off as “boys will be boys,”
+                        women face higher conduct standards especially in the workplace.
+                    </p>
+                    <p>That’s why it’s
+                        crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior
+                        is often laughed off as “boys will be boys,” women face higher conduct standards especially in
+                        the workplace. That’s why it’s
+                        crucial that, as women, our behavior on the job is beyond reproach. </p>
+                </div>
+            </div>
+            <div class="cont2">
+                <h2>Goals to Achieve for the leadership</h2>
+                <p>Who are in extremely love with eco friendly system.</p>
+                <div class="container">
+                    <div class="cont">
+                        <details>
+                            <summary>Succussed</summary>
+                            <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis,
+                                leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam.</p>
+                        </details>
+                        <details>
+                            <summary>Info</summary>
+                            <p>Donec nec justo eget felis facilisis fermentum.
+                                Aliquam porttitor mauris sit amet orci. Aenean dignissim
+                                pellentesque felis. leo quam aliquet diam, congue laoreet elit metus eget diam.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Danger</summary>
+                            <p>Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus
+                                diam.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>Warning</summary>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime itaque repellat eius.
+                                Officia quas maiores eaque doloremque deleniti consectetur ea?
+                            </p>
+                        </details>
+                    </div>
+                    <div class="cont-img">
+                        
+                       <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM ">
+                          <img class="img-fluid mx-auto" src="{% static 'img/play.png' %}" alt="">
+                       </a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </body>
+
 </html>
