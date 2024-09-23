@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="login-page">
-       
-        <form class="login" action="" method="post">
-           <input type="email" name=""  placeholder="Email">
-           <input type="password" name=""  placeholder="Password">
+        {{msg}}
+        <form class="login" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+           <input type="email" name="email"  placeholder="Email">
+           <input type="password" name="pass"  placeholder="Password">
            <button class="reg-btn">Login</button>
 
         </form>
