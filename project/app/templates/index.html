@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,10 @@
 </head>
 
 <body>
+    <div class="head">
     <div class="home">
+        <input type="checkbox" name="" id="click">
+
         <div class="navbar">
             <div class="logo">
                 <img src="{% static 'img/logo.png'%}">
@@ -24,7 +26,11 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#course">Courses</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>Welcome!!! {{data.name}}</li>
                 </ul>
+                <label for="click">
+                    <i class="fa-solid fa-bars"></i>
+                  </label>
             </div>
             <div>
                 <button class="btn"><a href="{% url 'login' %}">Login</a></button>
@@ -33,7 +39,6 @@
         </div>
         <div class="home-content">
             
-            <p>I am {{name}}  Mobile:{{contact}} and Date of Birth :{{date}} , email id: {{email}} <br></p>
             <h1>
                 We Ensure better education <br>for a better world.
             </h1>
@@ -70,7 +75,7 @@
 
         </div>
     </div>
-    </div>
+
     <div class="about" id="about">
         <div class="container1">
             <div class="about-img">
@@ -196,13 +201,14 @@
             </div>
         </div>
 
-        <form class="from" action="{% url 'rdata' %}" method="post">
+        <form class="from" action="{% url 'register' %}" method="post">
             {% csrf_token %}
             <h3>Search for Available Course</h3>
-            <input type="text" name="" id="" placeholder="Name">
-            <input type="tel" name="" id="" placeholder="Mobile number">
-            <input type="email" name="" id="" placeholder="Email">
+            <input type="text" name="name" id="" placeholder="Name">
+            <input type="tel" name="contact" id="" placeholder="Mobile number">
+            <input type="email" name="eamil" id="" placeholder="Email">
             <input type="password" name="pass" id="" placeholder="Password">
+            <input type="password" name="cpass"  placeholder="Conform Password">
 
             <select name="course">
                 <option value="Learn React js beginners">Learn React js beginners</option>
@@ -280,6 +286,7 @@
         </div>
 
     </div>
+</div>
 </body>
 
 </html>

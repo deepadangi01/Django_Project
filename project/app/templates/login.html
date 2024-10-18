@@ -9,9 +9,12 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="login-page">
-        {{msg}}
+<div  class="register">
+     <div class="login-page">
         <form class="login" action="{% url 'login' %}" method="post">
+            <h3>Welcome to Login Page..,<br>
+               <span>Login in Our Website!!</span> </h3>
+
             {% csrf_token %}
            <input type="email" name="email"  placeholder="Email">
            <input type="password" name="pass"  placeholder="Password">
@@ -19,6 +22,8 @@
 
         </form>
     </div>
+</div>
+
 </body>
 </html>
 

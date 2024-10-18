@@ -7,6 +7,10 @@
 
 
 }
+.head{
+    position: relative;
+
+}
 .home{
     background:url("/static/img/banner-bg.jpg") 50% 0 no-repeat fixed ;
     
@@ -16,7 +20,7 @@
     justify-content: space-around;
     align-items: center;
     position: sticky;
-    background-color: rgba(0,0,0, .6);
+    background-color: rgba(8, 6, 6, 0.6);
     top: 0;
     padding:10px;
 }
@@ -30,8 +34,9 @@ ul{
 .content ul li{
     list-style: none;
     padding:10px;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
     
 }
 .content ul li a{
@@ -148,20 +153,25 @@ background-color:black;
     font-size: 30px;
 }
 .login-page{
-    background-color: rgb(63, 65, 65,.3);
-    text-align: center;
+    background:url("/static/img/register.jpg") 50% 0 no-repeat ;
+    width: 100%;
+    height: 100vh;
+    padding:90px;
 
 }
 .login{
+    background-color: rgba(0,0,0, .4);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 70%;
+    justify-content: center;
     padding:40px;
+    width: 60%;
     margin: auto;
+    color:rgb(199, 188, 188);
 
 }
 .login input{
+    display: flex;
     padding:10px;
     margin:10px 0px;
     width: 100%;
@@ -196,6 +206,12 @@ background-color:black;
 .container1{
     display: flex;
     
+}
+#click{
+    display: none;
+}
+.content label{
+    display: none;
 }
 .container1 .about-img{
  width: 100%;
@@ -378,9 +394,52 @@ font-weight: 500;
     font-size: 18px;
 }
 span{
-    color:rgb(255, 132, 0);
-    font-weight: 300;
+    color:rgb(236, 125, 6);
+    font-weight: 500;
 }
+button{
+    color:white;
+}
+.board{
+    
+    background-color: rgb(214, 223, 238);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding:50px;
+    height: 100vh;
+
+}
+.board form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0,0,0, .1);
+    padding:10px;
+}
+.board form input{
+    padding:10px 20px;
+    border: none;
+    border-radius: 8px;
+}
+.board table{
+    border: 1px solid grey;
+    width: 100%;
+    font-size: 15px;
+}
+label{
+    color:rgb(107, 104, 104);
+    font-size: 14px;
+    font-weight: 400;
+}
+td{
+    padding:0px 20px;
+}
+
+
+
+
+
 
 
 
@@ -393,25 +452,44 @@ span{
       background-size: 100% 400px;
       height:100%;
     }
-    .navbar {
-      flex-direction: row;
-      padding: 10px;
+    
+    
+    .navbar .content ul {
+      display: block;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color:white;
+      width: 100%;
+      text-align: left;
+      display: none;
+      
     }
-    .content ul {
-      flex-direction: column;
-    }
+    
     .content ul li {
       padding: 10px;
       font-size: 18px;
     }
+    .content ul li a{
+        color:black;
+    }
     .home-content {
       padding: 3rem 3rem;
+    }
+    .content label{
+        display: block;
+        color:white;
     }
     .home-content h1 {
       font-size: 40px;
     }
+    #click:checked ~ .navbar .content ul {
+        display: block;
+      }
+    
     .box-content {
-      grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
     }
     .box {
       padding: 30px;
@@ -426,53 +504,18 @@ span{
       padding: 30px;
     }
     .login {
-      width: 80%;
-      padding: 30px;
+      width: 100%;
+      padding: 15px;
     }
-    .box-reg {
-        flex-wrap: wrap;
-        
+    .login-page{
+        height: 70vh;
+        padding:0px;
+        padding-top: 60px;
+    
     }
-    .box-reg .box {
-      margin: 10px;
-    }
-    .container1 {
-        flex-wrap: wrap;
-    }
-    .about-img {
-      width: 50%;
-      padding: 20px 0;
-    }
-    .about-content {
-      padding: 30px 0;
-
-    }
-    .cont2 {
-      padding: 20px;
-    }
-    .container {
-      flex-direction: row;
-    }
-    .cont {
-      width: 50%;
-      padding: 20px;
-    }
-    .cont-img {
-      height: 40vh;
-    }
-    .course-container {
-      padding: 30px;
-    }
-    .course {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .footer-cont1 {
-        flex-wrap: wrap;
-    }
-    .list {
-        flex-wrap: wrap;
-    }
-  }
+}
+    
+    
   
  
  

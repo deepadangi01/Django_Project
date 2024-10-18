@@ -18,32 +18,18 @@
                 inappropriate behavior is often laughed off as “boys will be boys,” 
                 women face higher conduct standards especially in the workplace. That's why it's crucial that, as women, our behavior on the job is beyond reproach.
             </p>
-            <div class="box-reg">
-                <div class="box">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <h1>Expert Instructors</h1>
-                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                </div>
-                <div class="box">
-                    <i class="fa-solid fa-newspaper"></i>
-                    <h1>Certification</h1>
-                    <p>
-                        Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-
-                    </p>
-                </div>
-            </div>
+            
         </div>
         
     
-    <form class="from" action="{% url 'rdata' %}" method="post">
+    <form class="from" action="{% url 'register' %}" method="post">
         {% csrf_token %}
         <h3>Search for Available Course</h3>
-        <input type="text" name="nm" id="" placeholder="Name">
+        <input type="text" name="name" id="" placeholder="Name">
         <input type="tel" name="con" id="" placeholder="Mobile number">
-        <input type="date" name="dt" id="" placeholder="BOD">
-        <input type="email" name="em" id="" placeholder="Email">
+        <input type="email" name="email" id="" placeholder="Email">
        <input type="password" name="pass" id="" placeholder="Password">
+       <input type="password" name="cpass" id="" placeholder="Conform Password">
 
         <select name="Course">
             <option value="Learn React js beginners">Learn React js beginners</option>
