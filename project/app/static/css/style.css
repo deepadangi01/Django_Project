@@ -337,7 +337,7 @@ font-weight: 500;
 }
 .footer-cont1 a{
    text-decoration: none;
-   background-color: rgb(187, 185, 185); 
+   background-color: rgb(245, 66, 7); 
    font-weight: 400;
    color:white;
    font-size: 14px;
@@ -405,7 +405,6 @@ button{
     background-color: rgb(214, 223, 238);
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     padding:50px;
     height: 100vh;
 
@@ -433,7 +432,9 @@ label{
     font-weight: 400;
 }
 td{
-    padding:0px 20px;
+    padding:0px 10px;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 
@@ -452,7 +453,12 @@ td{
       background-size: 100% 400px;
       height:100%;
     }
-    
+    .board{
+        flex-wrap: wrap;
+    }
+    .home{
+        height: 100%;
+    }
     
     .navbar .content ul {
       display: block;
@@ -499,6 +505,9 @@ td{
       background-size: 100%;
       flex-wrap: wrap;
     }
+    .box-reg{
+        flex-wrap: wrap;
+    }
     .from {
       width: 100%;
       padding: 30px;
@@ -513,7 +522,54 @@ td{
         padding-top: 60px;
     
     }
+    .container1{
+        display: flex;
+        flex-wrap: wrap;
+        padding:20px;
+
 }
+.home-content h1{
+    font-size: 30px;
+}
+ h1{
+    font-size: 30px;
+    padding:0px;
+}
+.home-content p{
+    font-size: 14px;
+}
+.course{
+    grid-template-columns: auto;
+}
+.footer-cont1{
+    flex-wrap: wrap;
+    padding:10px;
+}
+.footer .list{
+    flex-wrap: wrap;
+    padding:0px;
+
+}
+.container{
+    flex-wrap: wrap-reverse;
+}
+.board{
+    display: block;
+    padding:0px;
+    margin:0px;
+    width: 100%;
+}
+.board table{
+    padding:0px;
+}
+td{
+    padding:0px;
+    font-size: 10px;
+}
+.btn{
+    padding:5px;
+}
+  }
     
     
   
