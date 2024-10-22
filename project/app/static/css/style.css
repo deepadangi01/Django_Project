@@ -9,11 +9,16 @@
 }
 .head{
     position: relative;
+    top: 0;
 
 }
 .home{
-    background:url("/static/img/banner-bg.jpg") 50% 0 no-repeat fixed ;
+    background:url("/static/img/banner2.jpg") 50% 0 no-repeat fixed  ;
     
+}
+.dashboard{
+    background-color: rgb(214, 223, 238);
+
 }
 .navbar{
     display: flex;
@@ -23,6 +28,10 @@
     background-color: rgba(8, 6, 6, 0.6);
     top: 0;
     padding:10px;
+    color:white;
+}
+ .logo img{
+    width:120px;
 }
 ul{
     display: flex;
@@ -31,7 +40,7 @@ ul{
 
     
 }
-.content ul li{
+ul li{
     list-style: none;
     padding:10px;
     font-size: 16px;
@@ -97,7 +106,8 @@ ul{
     color:white;
 }
 .btn:hover{
-background-color:black;
+ background-color:black;
+ color:white;
 }
 
 .box-content .box:hover{
@@ -108,9 +118,10 @@ background-color:black;
    background:url("/static/img/register.jpg") 50% 0 no-repeat ;
    display: flex;
    height: 100vh;
+   background-color: rgba(0,0,0, .4);
+   padding:10px;
 }
 .from{
-    background-color: rgb(63, 65, 65,.3);
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -144,8 +155,7 @@ background-color:black;
     justify-content: center;
     align-items: left;
     padding:3rem;
-    color:rgb(124, 122, 122);
-    background-color: rgba(0,0,0, .6);
+    color:white;
 
 }
 .regi-content h2{
@@ -236,6 +246,19 @@ background-color:black;
     
 
 }
+table,tr,th,td{
+    border: 1px solid gray;
+}
+
+button{
+    border: none;
+    background-color: orange;
+    color:white;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+}
 .cont2{
     text-align: center;
     padding:20px;
@@ -314,6 +337,7 @@ color:rgb(67, 66, 66);
     color:rgb(34, 33, 33);
 }
 .course .item img{
+    width: 100%;
     transition: all .4s ease-in-out;
 
 }
@@ -356,6 +380,7 @@ font-weight: 500;
     font-weight: 500;
     color:white;
 }
+
 .list p{
     padding:8px;
     color:rgb(190, 188, 188);
@@ -402,7 +427,8 @@ button{
 }
 .board{
     
-    background-color: rgb(214, 223, 238);
+
+
     display: flex;
     justify-content: space-evenly;
     padding:50px;
@@ -422,7 +448,6 @@ button{
     border-radius: 8px;
 }
 .board table{
-    border: 1px solid grey;
     width: 100%;
     font-size: 15px;
 }
@@ -445,6 +470,7 @@ td{
 
 
 
+
   
   /* Tablets (min-width: 769px) and (max-width: 1024px) */
   @media only screen and  (max-width: 768px) {
@@ -458,6 +484,7 @@ td{
     }
     .home{
         height: 100%;
+
     }
     
     .navbar .content ul {
@@ -471,6 +498,19 @@ td{
       display: none;
       
     }
+    .content label{
+        display: block;
+        i{
+            color:white;
+        }
+    }
+    .regi-content{
+        color:white;
+        background-color: rgba(0,0,0, .6);
+    }
+    .regi-content form{
+        background-color: white;
+    }
     
     .content ul li {
       padding: 10px;
@@ -479,12 +519,11 @@ td{
     .content ul li a{
         color:black;
     }
-    .home-content {
-      padding: 3rem 3rem;
-    }
-    .content label{
-        display: block;
-        color:white;
+    .home-content{
+        text-align: left;
+        padding:2rem;
+        background-color: rgba(0,0,0, .4);
+    
     }
     .home-content h1 {
       font-size: 40px;
@@ -501,9 +540,9 @@ td{
       padding: 30px;
     }
     .register {
-      height: 100%;
       background-size: 100%;
       flex-wrap: wrap;
+      height: 100%;
     }
     .box-reg{
         flex-wrap: wrap;
@@ -512,9 +551,14 @@ td{
       width: 100%;
       padding: 30px;
     }
+    
+    
     .login {
       width: 100%;
       padding: 15px;
+    }
+    .login input{
+        background-color: white;
     }
     .login-page{
         height: 70vh;
@@ -561,13 +605,27 @@ td{
 }
 .board table{
     padding:0px;
+    
 }
 td{
     padding:0px;
-    font-size: 10px;
+    font-size: 14px;
 }
 .btn{
     padding:5px;
+}
+.list .list-i h3{
+    font-weight: 400;
+    padding: 5px 10px;
+
+}
+.list-i label{
+    font-weight: 400;
+    font-size: 14px;
+    padding:10px;
+}
+.list-i input{
+    padding:2px;
 }
   }
     

@@ -24,7 +24,6 @@
     
     <form class="from" action="{% url 'register' %}" method="post">
         {% csrf_token %}
-        <h3>Search for Available Course</h3>
         <input type="text" name="name" id="" placeholder="Name">
         <input type="tel" name="con" id="" placeholder="Mobile number">
         <input type="email" name="email" id="" placeholder="Email">

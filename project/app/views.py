@@ -26,7 +26,7 @@ def register(request):
                     stu_password=password
                     )
                 msg="Registration sccessfull"
-                return render (request,'login.html',{'msg':msg})
+                return render (request,'index.html',{'msg':msg})
         else:
             msg="Password is not matching"
             return render(request,'register.html',{'msg':msg})

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,94 +10,92 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Education website</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
 </head>
+
 <body>
     <div class="dashboard">
         <div class="navbar">
             <div class="logo">
-                <img src="{% static 'img/logo.png' %}">
-            </div>
-            <div class="content">
-                <ul>
-                
-                    <li>Welcome My Website !! <span>{{data.name}}</span></li>
-                </ul>
-                <label for="click">
-                    <i class="fa-solid fa-bars"></i>
-                  </label>
+                <img src="{% static 'img/logo.png' %}" width="120">
             </div>
             <div>
-                <a href="{% url 'logout' %}" ><button class="btn">LogOut</button></a>
+                <a href="{% url 'logout' %}"><button>LogOut</button></a>
 
             </div>
         </div>
-    <div class="board">
-        <div>
 
-            {% if key2 %}
-            <form action="{% url 'update' x=key2.id %}" x=key2.id class="form" method="post" >
-                {% csrf_token %}
-    
-                <label for="name">Name:</label>
-                <input type="text" name="name" value="{{key2.name}}" readonly >
-                <label for="email">Email</label>
-                <input type="email" name="email" value="{{key2.email}}" readonly>
-                <label for="contact">Contact:</label>
-                <input type="number" name="contact" value="{{key2.contact}}" readonly>
-                <label for="query">Query</label>
-                <input type="text" name="query" value="{{key2.query}}"  inputmode="">
-                <button class="btn">Update</button>
+        <h4 style="padding: 20px 10px;">Welcome My Website!! {{data.name}}</h4>
+
+        <div class="board">
+
+            <div>
+
+
+                {% if key2 %}
+                <form action="{% url 'update' x=key2.id %}" x=key2.id class="form" method="post">
+                    {% csrf_token %}
+
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="{{key2.name}}" readonly>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" value="{{key2.email}}" readonly>
+                    <label for="contact">Contact:</label>
+                    <input type="number" name="contact" value="{{key2.contact}}" readonly>
+                    <label for="query">Query</label>
+                    <input type="text" name="query" value="{{key2.query}}" inputmode="">
+                    <button>Update</button>
                 </form>
                 {% else %}
-                <form action="{% url 'query' %}"  method="post" class="form" >
+                <form action="{% url 'query' %}" method="post" class="form">
                     {% csrf_token %}
-        
+
                     <label for="">Name:</label>
-                    <input type="text" name="name" value="{{data.name}}" readonly >
+                    <input type="text" name="name" value="{{data.name}}" readonly>
                     <label for="email">Email</label>
-                    <input type="email" name="email" value="{{data.email}}"  readonly>
+                    <input type="email" name="email" value="{{data.email}}" readonly>
                     <label for="con">Contact:</label>
                     <input type="number" name="contact" value="{{data.contact}}" readonly>
                     <label for="query">Query</label>
                     <input type="text" name="query" id="query" inputmode="">
                     <br>
-                    <button class="btn">Query</button>
-                    </form>
+                    <button>Query</button>
+                </form>
                 {% endif %}
+            </div>
+            <div class="res-tbl">
+                <h4>User data Table..</h4>
+                <table class="table table-hover">
+
+                    <tr>
+                        <th>sno</th>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>Contact</th>
+                        <th>Query</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+
+
+                    <tbody>
+                        {% for i in query_data %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.stu_name}}</td>
+                            <td>{{i.stu_email}}</td>
+                            <td>{{i.stu_contact}}</td>
+                            <td>{{i.stu_query}}</td>
+                            <td><a href="{% url 'edit' x=i.id %}"><button>Edit </button></a></td>
+                            <td><a href="{% url 'delete' x=i.id y=i.stu_email %}"><button>Delete</button></a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div>
-            <h4>User data Table..</h4>
-    
-       <table border="1">
-    
-        <tr>
-            <th>sno</th>
-            <th>name</th>
-            <th>email</th>
-            <th>Contact</th>
-            <th>Query</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-       <tbody>
-        {% for i in query_data %}
-        <tr>
-        <td>{{forloop.counter}}</td>
-        <td>{{i.stu_name}}</td>
-        <td>{{i.stu_email}}</td>
-        <td>{{i.stu_contact}}</td>
-        <td>{{i.stu_query}}</td>
-       <td><a href="{% url 'edit' x=i.id %}"><button class="btn">Edit </button></a></td>
-       <td><a href="{% url 'delete' x=i.id y=i.stu_email %}"><button class="btn">Delete</button></a></td>
-        </tr>
-        {% endfor %}
-       </tbody>
-    </table>
-  </div>
-</div>   
-    
-</div>
-</div>
+
+    </div>
+    </div>
 </body>
+
 </html>
